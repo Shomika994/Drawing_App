@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item name="brushSize" type="id">brush_size</item>
-    <item name="drawingView" type="id">drawing_view</item>
+    <item name="brushSize" type="id"/>
+    <item name="drawingView" type="id"/>
 </resources>
