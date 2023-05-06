@@ -20,7 +20,7 @@ class DrawingView(context: Context, attrs: AttributeSet): View(context, attrs) {
        private var canvasPaint: Paint? = null
        private var canvasBitmap: Bitmap? = null
        private var brushSize: Float = 0.toFloat()
-       private var color = Color.BLACK
+       private var color = Color.WHITE
        private var canvas: Canvas? = null
        private var paths = ArrayList<CustomPath>()
 
