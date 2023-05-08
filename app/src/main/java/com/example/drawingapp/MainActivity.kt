@@ -7,7 +7,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
-import android.provider.MediaStore.Images.Media
 import android.view.View
 import android.widget.ImageButton
 import android.widget.ImageView
@@ -76,6 +75,16 @@ class MainActivity : AppCompatActivity() {
         val imageButton: ImageButton = findViewById(R.id.folder_image_button)
         imageButton.setOnClickListener{
             requestStoragePermission()
+        }
+
+        val undoBtn: ImageButton = findViewById(R.id.undo_button)
+        undoBtn.setOnClickListener{
+            drawingView?.onClickUndo()
+        }
+
+        val redoBtn: ImageButton = findViewById(R.id.redo_button)
+        redoBtn.setOnClickListener{
+            drawingView?.onClickRedo()
         }
 
     }

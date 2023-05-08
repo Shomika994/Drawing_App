@@ -1,5 +1,4 @@
 package com.example.drawingapp
-
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.Canvas
@@ -23,9 +22,24 @@ class DrawingView(context: Context, attrs: AttributeSet): View(context, attrs) {
        private var color = Color.WHITE
        private var canvas: Canvas? = null
        private var paths = ArrayList<CustomPath>()
+       private var undoPaths = ArrayList<CustomPath>()
 
     init{
         setUpDrawing()
+    }
+
+    fun onClickUndo(){
+        if(paths.size > 0) {
+            undoPaths.add(paths.removeAt(paths.size - 1))
+            invalidate()
+        }
+    }
+
+    fun onClickRedo(){
+        if(undoPaths.isNotEmpty()) {
+            paths.add(undoPaths.removeAt(undoPaths.size - 1))
+            invalidate()
+        }
     }
 
     private fun setUpDrawing(){   // We need this to call all variables that we prepared

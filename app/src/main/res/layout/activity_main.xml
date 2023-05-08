@@ -141,14 +141,32 @@
             android:src="@drawable/folder"
             />
 
-    <ImageButton
-        android:id="@+id/brushSize"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_margin="5dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/paint_brush_icon"
+        <ImageButton
+            android:id="@+id/brushSize"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/paint_brush_icon"
         />
+
+        <ImageButton
+            android:id="@+id/undo_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/undo"
+            />
+
+        <ImageButton
+            android:id="@+id/redo_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/redo"
+            />
 
     </LinearLayout>
 
